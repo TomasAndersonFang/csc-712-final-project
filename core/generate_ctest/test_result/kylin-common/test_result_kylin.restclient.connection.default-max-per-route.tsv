@@ -1,0 +1,8 @@
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException	10	p	0.369
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.restclient.RestClientTest#basicTests	10	p	0.341
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException	40	p	0.354
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.restclient.RestClientTest#basicTests	40	p	0.335
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException	10	p	0.362
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.restclient.RestClientTest#basicTests	10	p	0.316
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.restclient.RestClientTest#basicTests	40	p	0.334
+kylin.restclient.connection.default-max-per-route	org.apache.kylin.common.KylinConfigTest#testCreateInstanceFromUriThrowsRuntimeException	40	p	0.349

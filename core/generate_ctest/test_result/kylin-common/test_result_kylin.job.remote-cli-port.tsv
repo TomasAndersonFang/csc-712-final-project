@@ -1,0 +1,4 @@
+kylin.job.remote-cli-port	org.apache.kylin.common.util.SSHClientTest#testScp	11	p	0.221
+kylin.job.remote-cli-port	org.apache.kylin.common.util.SSHClientTest#testCmd	11	p	0.223
+kylin.job.remote-cli-port	org.apache.kylin.common.util.SSHClientTest#testScp	44	p	0.225
+kylin.job.remote-cli-port	org.apache.kylin.common.util.SSHClientTest#testCmd	44	p	0.223

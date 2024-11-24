@@ -1,0 +1,6 @@
+kylin.resourcestore.reconnect-base-ms	org.apache.kylin.common.persistence.ResourceToolTest#testCopy	50	p	0.444
+kylin.resourcestore.reconnect-base-ms	org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback	50	p	0.253
+kylin.resourcestore.reconnect-base-ms	org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testFileStore	50	p	0.284
+kylin.resourcestore.reconnect-base-ms	org.apache.kylin.common.persistence.ResourceToolTest#testCopy	200	p	0.438
+kylin.resourcestore.reconnect-base-ms	org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testFileStore	200	p	0.285
+kylin.resourcestore.reconnect-base-ms	org.apache.kylin.common.persistence.LocalFileResourceStoreTest#testRollback	200	p	0.251
