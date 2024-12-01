@@ -14,7 +14,7 @@ A prototype for generating and running ctests. Below are the projects we current
 - Hbase 2.2.2: `hbase-server`.
 - ZooKeeper 3.5.6: `zookeeper-server`.
 - Alluxio 2.1.0: `core`.
-- Kylin 4.0.2: `kylin-common`.
+- Kylin 4.0.2: `core-common`.
 
 We also provided our instrumented versions of the above projects:
 
