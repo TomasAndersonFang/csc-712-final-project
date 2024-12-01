@@ -58,6 +58,11 @@ class Runner:
         if self.module == "alluxio-core":
             if "alluxio.ConfigurationRule" in trace:
                 return True
+        if self.module == "kylin-common":
+            if "testThreadLocalOverride" in trace and "Test" not in trace:
+                return True
+            if "testSetKylinConfigInEnvIfMissingTakingEmptyProperties" in trace and "Test" not in trace:
+                return True
         return False
 
     def skipTrace(self, trace):
@@ -165,6 +170,8 @@ class Runner:
             start_time_for_this_method = time.time()
             if self.module == "alluxio-core":
                 cmd = ["mvn", "surefire:test", "-Dtest=" + method, "-DfailIfNoTests=false"]
+            elif self.module == "kylin-common":
+                cmd = ["mvn", "-pl", "core-common", "surefire:test", "-Dtest=" + method, "-DfailIfNoTests=false"]
             else:
                 cmd = ["mvn", "surefire:test", "-Dtest=" + method]
             print ("mvn surefire:test -Dtest="+method)

@@ -25,6 +25,9 @@ def read_tsv(module):
     if module == "zookeeper-server":
         assert len(params) == 32
         return 32
+    elif module == "kylin-common":
+        assert len(params) == 283
+        return 283
     else:
         assert len(params) == 90
         return 90
@@ -94,6 +97,25 @@ def infer_category(param, module):
             return ZKLIMIT
         if isZKSize(name):
             return ZKSIZE
+        
+    if module == "kylin":
+        if isZKDirPath(name):
+            return ZKDIR
+        if isZKPort(name):
+            return ZKPORT
+        if isZKPortAddress(name):
+            return ZKPORTADDRESS
+        if isZKLimit(name):
+            return ZKLIMIT
+        if isZKSize(name):
+            return ZKSIZE
+        if isRatio(name):
+            return RATIO
+        if isEnv(name):
+            return ENV
+        if isMetadataUrl(name):
+            return MURL
+        
     if isPotentialFloat(name):
         return POTENTIALFLOAT
     return NONE
@@ -170,6 +192,15 @@ def generate(module):
         generators[ZKSIZE] = genZKSize
         generators[ZKPORT] = genZKPort
         generators[ZKPORTADDRESS] = genZKPortAddress
+    if module == "kylin":
+        generators[ZKDIR] = genZKDir
+        generators[ZKLIMIT] = genZKLimit
+        generators[ZKSIZE] = genZKSize
+        generators[ZKPORT] = genZKPort
+        generators[ZKPORTADDRESS] = genZKPortAddress
+        generators[RATIO] = genRatio
+        generators[ENV] = genEnv
+        generators[MURL] = genMetadataUrl
     for param in params:
         param.gvalues = generators[param.cate](param)
 
