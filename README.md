@@ -1,12 +1,10 @@
-# openctest
+# OpenCTest
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## CSC 712 Project
 This project aims to evaluate the effectiveness, applicability, and generalizability of openctest by applying it to popular open-source systems such as Alluxio, Apache Flink, Apache Kylin, and Apache Superset. The scope includes deploying openctest on these platforms to assess its capabilities and limitations. Specifically, the project involves testing the applicability of openctest on **Flink**, **Kylin**, and **Superset**, as well as investigating its generalizability across these systems. Through this analysis, the project seeks to highlight openctest’s potential as a robust testing tool for diverse software ecosystems.
-
-### Demo
 
 ### 1. Apache Flink (See our fork: [https://github.com/kofiarkoh/flink](https://github.com/kofiarkoh/flink))
 
@@ -98,7 +96,6 @@ cd core/generate_ctest
 
 ## Overview
 
-
 This repository releases the prototype and datatsets of the `ctest` paper:
 
 **[Testing Configuration Changes in Context to Prevent Production Failures](https://www.usenix.org/conference/osdi20/presentation/sun "paper")** <br/>
@@ -115,3 +112,15 @@ Please cite the paper if you use the code or the datasets.
 ### [data](https://github.com/xlab-uiuc/openctest/tree/main/data "data")
 
  The datasets evaluated in the paper.
+
+ ## Demonstration
+
+ ### OpenCTest Demonstration on Flink
+
+ [![Watch the video](https://github.com/user-attachments/assets/092fbdb6-0edf-4b9a-9636-607a2330343b)](https://drive.google.com/file/d/1sDHmN8qKRybBM9WC6RsE5NUP1g7GAFEi/view?resourcekey)
+
+ ## Status Updates
+
+ Our weekly status updates presented during class.
+ 
+ [PowerPoint Presentation](https://docs.google.com/presentation/d/1KXfRPsoZes1UmxvamBb_bFWPSWMMfIyDqCr1yzzJiK8/edit#slide=id.p)
