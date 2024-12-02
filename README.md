@@ -12,7 +12,7 @@ This project aims to evaluate the effectiveness, applicability, and generalizabi
 - Java installation. (This project has been test on Java 17 but can it may also be run on Java 11)
 - Maven must be installed. You may check by running `mvn -v` in your terminal. We have ran this against Maven 3.9
 
-#### Runninng  Configuration Tests
+#### Running  Configuration Tests
 
 > **NOTE:** The steps below have been run using **openjdk version 17.0.10** on **macOS Sequoia**.
 
@@ -94,7 +94,7 @@ cd core/generate_ctest
 - Kylin: https://github.com/TomasAndersonFang/csc-712-final-project/tree/kylin/core/generate_ctest/test_result/kylin-common
 
 
-## Overview
+<!--- ## Overview
 
 This repository releases the prototype and datatsets of the `ctest` paper:
 
@@ -102,6 +102,7 @@ This repository releases the prototype and datatsets of the `ctest` paper:
 In Proceedings of the 14th USENIX Symposium on Operating Systems Design and Implementation (OSDI'20), Nov. 2020.
 
 Please cite the paper if you use the code or the datasets.
+-->
 
 ## Repository Structure
 
