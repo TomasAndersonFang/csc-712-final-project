@@ -10,8 +10,9 @@ Group Members: Shandler Mason, Lawrence Arkoh, Lingjun Liu, Sen Fang
 
 ### 1. Apache Flink (See our fork: [https://github.com/kofiarkoh/flink](https://github.com/kofiarkoh/flink))
 
+Once the sytem requirements are met, it should take approximately minutes to complete running the sample test.
 #### System Requirement
-- Java installation. (This project has been test on Java 17 but can it may also be run on Java 11)
+- Java installation. (This project has been test on Java 17 but can it may also be run on Java 11). Run `java --version` to check your java installation and version.
 - Maven must be installed. You may check by running `mvn -v` in your terminal. We have ran this against Maven 3.9
 
 #### Running  Configuration Tests
