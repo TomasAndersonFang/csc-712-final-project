@@ -8,9 +8,42 @@ This project aims to evaluate the effectiveness, applicability, and generalizabi
 
 ### Demo
 
+### 1. Apache Flink (See our fork: [https://github.com/kofiarkoh/flink](https://github.com/kofiarkoh/flink))
+
+#### System Requirement
+- Java installation. (This project has been test on Java 17 but can it may also be run on Java 11)
+- Maven must be installed. You may check by running `mvn -v` in your terminal. We have ran this against Maven 3.9
+
+#### Runninng  Configuration Tests
+
+> **NOTE:** The steps below have been run using **openjdk version 17.0.10** on **macOS Sequoia**.
+
+We have alread applied CTEST to this project by adding the necessary CTEST specific code: [See Configuration Setup](https://github.com/kofiarkoh/flink/blob/master/flink-core/src/main/java/org/apache/flink/configuration/Configuration.java)
+
+For demonstration purposes, the steps below simulates testing configuration tests induced failures 
+using [TimeWindowTranslationTest](https://github.com/kofiarkoh/flink/blob/master/flink-runtime/src/test/java/org/apache/flink/streaming/runtime/operators/windowing/TimeWindowTranslationTest.java) test class inside the `flink-runtime` submodule _only_.
+- Clone the project by running the command `git clone git@github.com:kofiarkoh/flink.git`
+- Switch to the project directory by running `cd flink/flink-runtime`
+- Run `mvn clean install -DskipTests  -Denforcer.skip=true -Drat.skip=true` to build the project
+- Run the test below using default configuration values as specified in the test file. This test will PASS
+```
+ mvn surefire:test -Denforcer.skip=true -Dctest.config.save -Dmaven.test.failure.ignore=true -Dtest="org.apache.flink.streaming.runtime.operators.windowing.TimeWindowTranslationTest" -Drat.skip=true
+```
+![Failing Tests](https://raw.githubusercontent.com/kofiarkoh/flink/refs/heads/master/img/pass.png)
+- Now lets change one conguration value used in the tests (this value is a valid configuration value). This test will PASS
+```
+mvn surefire:test -Denforcer.skip=true -Dctest.config.save -Dmaven.test.failure.ignore=true -Dtest="org.apache.flink.streaming.runtime.operators.windowing.TimeWindowTranslationTest" -Dconfig.inject.cli="parallelism.default=1" -Drat.skip=true
+```
+- To simulate a configuration induced test failure. Run the command below. _For this step, we set `parallelism.default` to an invalid value `1s` because valid value must be an integer. This test will FAIL because an invalid configuration value is injected into the test case
+```
+ mvn surefire:test -Denforcer.skip=true -Dctest.config.save -Dmaven.test.failure.ignore=true -Dtest="org.apache.flink.streaming.runtime.operators.windowing.TimeWindowTranslationTest" -Dconfig.inject.cli="parallelism.default=1s" -Drat.skip=true
+
+```
+![Failing Tests](https://raw.githubusercontent.com/kofiarkoh/flink/refs/heads/master/img/fail.png)
+
 
 ### Implementations of applying openctest:
-- Flink: 
+- Flink: https://github.com/kofiarkoh/flink
 - Superset: https://github.com/TomasAndersonFang/csc-712-final-project/commit/6eb1c819d303d47625aa529aefb8bb31c9e642dd
 - Kylin: https://github.com/TomasAndersonFang/csc-712-final-project/commit/f087fae14f65b2273e1028ad5356e876ab4d88fb
 
