@@ -85,6 +85,49 @@ cd core/generate_ctest
 ./generate_ctest.sh
 ```
 
+### 3. Apache Superset
+
+#### System Requirement
+- Docker Installation (https://docs.docker.com/get-started/get-docker/)
+- Linux machine
+
+#### Docker Container Setup 
+- Clone the branch `Superset`
+```console
+git clone -b Superset https://github.com/TomasAndersonFang/csc-712-final-project.git
+```
+- Build the Dockerfile
+```console
+cd csc-712-final-project/core
+docker build --tag openctest .
+```
+- Run the container
+```console
+docker run -it --name ctest openctest
+```
+- Access the container
+```console
+docker exec -it ctest /bin/bash
+```
+#### Clone the project and Add Kylin in the project
+- Clone the branch `Superset`
+```console
+git clone -b Superset https://github.com/TomasAndersonFang/csc-712-final-project.git
+```
+- Add Apache Kylin in `core` and `core/identify_param`
+```console
+cd csc-712-final-project/core
+./add_project.sh Superset
+cd ../identify_param
+./add_project.sh Superset
+```
+#### Run Configuration Tests
+- Go to the `generate_ctest` directory and run configuration tests. The test results will be store in the `result/report.csv` directory.
+```console
+cd core/generate_ctest
+./gen_ctest.py
+```
+
 ### Implementations of applying openctest:
 - Flink: https://github.com/kofiarkoh/flink
 - Superset: https://github.com/TomasAndersonFang/csc-712-final-project/commit/6eb1c819d303d47625aa529aefb8bb31c9e642dd
