@@ -97,7 +97,7 @@ cd core/generate_ctest
 - Superset: https://github.com/TomasAndersonFang/csc-712-final-project/blob/Superset/core/generate_ctest/result/report.csv
 - Kylin: https://github.com/TomasAndersonFang/csc-712-final-project/tree/kylin/core/generate_ctest/test_result/kylin-common
 
-We anzlyze the results for apache-flink and alluxio-core in this repository [https://github.com/kofiarkoh/csc_712_software_testing_project_work](https://github.com/kofiarkoh/csc_712_software_testing_project_work)
+We analyze the results for apache-flink and alluxio-core in this repository [https://github.com/kofiarkoh/csc_712_software_testing_project_work](https://github.com/kofiarkoh/csc_712_software_testing_project_work)
 <!--- ## Overview
 
 This repository releases the prototype and datatsets of the `ctest` paper:
