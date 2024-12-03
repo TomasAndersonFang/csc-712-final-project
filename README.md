@@ -91,6 +91,7 @@ cd core/generate_ctest
 - Kylin: https://github.com/TomasAndersonFang/csc-712-final-project/commit/f087fae14f65b2273e1028ad5356e876ab4d88fb
 
 ### Test Results:
+![Test results](./results.png)
 - Alluxio: https://github.com/kofiarkoh/csc_712_software_testing_project_work/tree/main/results/alluxio-core
 - Flink: https://github.com/kofiarkoh/csc_712_software_testing_project_work/tree/main/flink
 - Superset: https://github.com/TomasAndersonFang/csc-712-final-project/blob/Superset/core/generate_ctest/result/report.csv
