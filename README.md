@@ -6,6 +6,8 @@
 ## CSC 712 Project
 This project aims to evaluate the effectiveness, applicability, and generalizability of openctest by applying it to popular open-source systems such as Alluxio, Apache Flink, Apache Kylin, and Apache Superset. The scope includes deploying openctest on these platforms to assess its capabilities and limitations. Specifically, the project involves testing the applicability of openctest on **Flink**, **Kylin**, and **Superset**, as well as investigating its generalizability across these systems. Through this analysis, the project seeks to highlight openctest’s potential as a robust testing tool for diverse software ecosystems.
 
+Group Members: Shandler Mason, Lawrence Arkoh, Lingjun Liu, Sen Fang
+
 ### 1. Apache Flink (See our fork: [https://github.com/kofiarkoh/flink](https://github.com/kofiarkoh/flink))
 
 #### System Requirement
