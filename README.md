@@ -22,7 +22,7 @@ Once the sytem requirements are met, it should take approximately minutes to com
 We have alread applied CTEST to this project by adding the necessary CTEST specific code: [See Configuration Setup](https://github.com/kofiarkoh/flink/blob/master/flink-core/src/main/java/org/apache/flink/configuration/Configuration.java)
 
 For demonstration purposes, the steps below simulates testing configuration tests induced failures 
-using [TimeWindowTranslationTest](https://github.com/kofiarkoh/flink/blob/master/flink-runtime/src/test/java/org/apache/flink/streaming/runtime/operators/windowing/TimeWindowTranslationTest.java) test class inside the `flink-runtime` submodule _only_.
+using [TimeWindowTranslationTest](https://github.com/kofiarkoh/flink/blob/master/flink-runtime/src/test/java/org/apache/flink/streaming/runtime/operators/windowing/TimeWindowTranslationTest.java) test class inside the `flink-runtime` submodule _only_ (this should take about 5 minutes).
 - Clone the project by running the command `git clone git@github.com:kofiarkoh/flink.git`
 - Switch to the project directory by running `cd flink/flink-runtime`
 - Run `mvn clean install -DskipTests  -Denforcer.skip=true -Drat.skip=true` to build the project
